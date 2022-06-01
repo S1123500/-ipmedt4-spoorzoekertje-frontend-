@@ -1,0 +1,24 @@
+{
+    "venues": [
+        {
+            "description": "Rock Cafe",
+            "name": "Lazaru's",
+            "geometry": [52.16376252522057, 4.485961198480929]
+        },
+        {
+            "description": "Klein maar fijn",
+            "name": "Dranklokaal 1650",
+            "geometry": [52.158307646738685, 4.488973611814642]
+        },
+        {
+            "description": "Lievelingsbar van muziekgezelschap Sempre Crescendo.",
+            "name": "Café de Keyzer",
+            "geometry": [52.156074843175844, 4.486179982979343]
+        },
+        {
+            "description": "Makkelijk te bereiken, met een grote bar.",
+            "name": "De Vergulde Kruik",
+            "geometry": [52.1617434418649, 4.486421013661588]
+        }        
+    ]
+}
