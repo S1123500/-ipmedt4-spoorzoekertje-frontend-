@@ -8,9 +8,9 @@ import './App.css';
 function App() {
   return (
     <section className="App">
-      <ContentTop/>
+      <ContentTop playertype="player"> </ContentTop>
       <MapView/>
-      <ContentBottom/>
+      <ContentBottom questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"> </ContentBottom>
     </section>
   );
 }
