@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, TileLayer, Marker } from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import data from '../assets/data';
 import Markers from './VenueMarkers';
@@ -34,7 +34,9 @@ const MapView = (props) => {
       <Markers venues={data.venues} />
       {
         location.loaded && !location.error && (
-          <Marker icon={markericon} position={[latitude, longitude]}></Marker>
+          <Marker icon={markericon} position={[latitude || defaultLat, longitude || defaultLng]}>
+            <Popup>You are here.</Popup>
+          </Marker>
         )};
     </Map>
   );

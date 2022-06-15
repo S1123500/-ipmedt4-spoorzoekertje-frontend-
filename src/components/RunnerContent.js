@@ -12,10 +12,10 @@ const RunnerContent = (props) => {
                 <h2>Make a Quest</h2>
                 <ul className="submit-objective">
                     <li>
-                        <label>
+                        <label className="runner-label">
                             <input type="text" placeholder="Objective" />
                         </label>
-                        <label>
+                        <label className="runner-label">
                             <input type="text" placeholder="Location" />
                         </label>
                     </li>

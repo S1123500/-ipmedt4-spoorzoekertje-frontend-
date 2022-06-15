@@ -25,7 +25,7 @@ const PlayerContent = (props) => {
                 </ul>
 
                 <div className="bottomContentInner">
-                    <p>NReceive next objective in</p>
+                    <p>Receive next objective in</p>
                     <Timer totalseconds={69
                     }/>    
                 </div>
