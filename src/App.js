@@ -1,5 +1,6 @@
 import React from 'react';
-// import Overlay from './components/GameOverlay';
+import Parent from './Parent';
+import Overlay from './components/GameOverlay';
 import Login from './components/Login';
 import './css/App.css';
 // import ApiGET from './hooks/ApiGET';
@@ -8,10 +9,10 @@ import './css/App.css';
 
 
 function App() {
+
   return (
     <section className="App">
-      {/* <Overlay playertype="player" questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"> </Overlay> */}
-      <Login />
+      <Parent />
     </section>
   );
 }

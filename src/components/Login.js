@@ -12,13 +12,32 @@ import ApiROOM from "../hooks/ApiROOM";
 
 
 class Login extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            input_code: ''
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange = (e) => {
+        console.log(document.getElementById('roomCode').value);
+        this.input_code = document.getElementById('roomCode').value;
+    }
 
     code = () => {
         document.getElementById("dropdownCode").style.display = "flex";
     }
-
+    
     howTo = () => {
         document.getElementById("dropdownHT").style.display = "flex";
+    }
+    
+    onInput = (e) => {
+        //let code = room_code;
+        this.props.formCallback(this.input_code);
+        e.preventDefault();
     }
 
     makeRoom = () => {
@@ -35,7 +54,7 @@ class Login extends React.Component {
             }
         }
     }
-    
+
     getCode = () => {
         //generate random 4 digit code
         let code = [];
@@ -44,6 +63,10 @@ class Login extends React.Component {
         }
         console.log(code.join(""));
         return code.join("");
+    }
+
+    makeGame = () => {
+        this.getCode();
     }
 
     render() {
@@ -58,12 +81,12 @@ class Login extends React.Component {
                     </figure>
                 </button>
                 <article id="dropdownCode" className="contentCode">
-                    <form action="">
-                        <input className="roomCode" type="text" id="roomCode" name="roomCode" defaultValue="Code" />
+                    <form action="" onSubmit={this.onInput}>
+                        <input className="roomCode" type="text" id="roomCode" name="roomCode" placeholder="Code" onChange={this.handleChange} />
                         <input className="submit" type="submit" value="Join" />
                     </form>
                 </article>
-                <button onClick={this.getCode}>
+                <button onClick={this.makeGame}>
                     <h2>Create Room </h2>
                     <figure>
                         <img src={add} alt=""></img>
@@ -78,7 +101,7 @@ class Login extends React.Component {
                 <article id="dropdownHT" className="contentHT">
                     <h2>Get some friends</h2>
                     <h2>Make two teams</h2>
-                    <h2>Play with 2+ phones</h2>
+                    <h2>Play with 2 phones</h2>
                     <h2>Runners place tasks throughout the city</h2>
                     <h2>Players try to catch Runners by unlocking and completing tasks</h2>
                 </article>
