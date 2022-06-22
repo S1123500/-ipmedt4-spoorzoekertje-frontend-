@@ -7,7 +7,8 @@
 
 .head {
     background-color: var(--overlay-yellow);
-    height: 5vh;
+    height: 7.5vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 3rem;
 }
 .bottomContent {
     display: flex;
@@ -28,6 +30,11 @@
 .questsleft {
     display: flex;
     align-items: flex-start;
+    padding: 1.5rem;
+}
+
+.questsleft > h1 {
+    font-size: 3rem;
 }
 
 p {
@@ -52,6 +59,11 @@ h1, h2 {
     width: 100vw;
 }
 
+.interaction-container > h2{
+    align-self: flex-start;
+    padding-left: 5vw;
+}
+
 .interaction-container * {
     padding-top: 1vh;
     padding-bottom: 1vh;
@@ -63,6 +75,7 @@ h1, h2 {
     align-items: center;
     margin: 0%;
     padding: 0%;
+    width: 90vw;
 }
 
 .deelEenMeterBier {
@@ -78,6 +91,10 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.bottomContentInner > p{
+    color: #FFFFFF;
 }
 
 .nextLocation {
@@ -98,7 +115,7 @@ h1, h2 {
 .timer {
     margin: 0%;
     padding: 0%;
-    font-size: 250%;
+    font-size: 10rem;
 }
 
 .runner-label {
