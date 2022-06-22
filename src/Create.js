@@ -3,7 +3,7 @@ import React from 'react';
 
 function CreateLocatie(){
     return(
-        <form action = "/create" method = "post">
+        <form onSubmit={this.ApiPOST}>
             <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"/>
             <table>
             <tr>

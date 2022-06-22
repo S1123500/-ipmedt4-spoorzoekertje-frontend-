@@ -3,6 +3,7 @@ import useGeolocation from './useGeolocation';
 
 //Used to post location data to backend.
 //Really needs to be fixed to work with the correct table syntaxes.
+
 const ApiPOST = () => {
     const BASE_URL = "http://127.0.0.1:8000/api/";
     const location = useGeolocation();
