@@ -17,7 +17,8 @@ export const Map = () => {
 
   return <div>
     {/* pinntje */}
-    <button onClick={() => {setSelectedLocatie(1)}}> Button </button>
+    <button onClick={() => {setSelectedLocatie(1)}}> dranklokaal </button>
+    <button onClick={() => {setSelectedLocatie(0)}}>  happy days</button>
     {/* kaartje */}
     <section>
       <p>{locaties.length > 0 ? locaties[selectedLocatie].name : "Geen titel"}</p>
