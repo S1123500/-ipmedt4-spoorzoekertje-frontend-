@@ -22,8 +22,8 @@ class Login extends React.Component {
     }
 
     handleChange = (e) => {
-        console.log(document.getElementById('RoomCode').value);
-        this.input_code = document.getElementById('RoomCode').value;
+        console.log(document.getElementById('roomCode').value);
+        this.input_code = document.getElementById('roomCode').value;
     }
 
     code = () => {
@@ -82,7 +82,7 @@ class Login extends React.Component {
                 </button>
                 <article id="dropdownCode" className="contentCode">
                     <form action="" onSubmit={this.onInput}>
-                        <input className="roomCode" type="text" id="RoomCode" name="Code" onChange={this.handleChange} />
+                        <input className="roomCode" type="text" id="roomCode" name="roomCode" placeholder="Code" onChange={this.handleChange} />
                         <input className="submit" type="submit" value="Join" />
                     </form>
                 </article>
