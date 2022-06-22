@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function CreateLocatie(){
     return(
         <form action = "/create" method = "post">
