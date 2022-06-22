@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
 import LocatieService from "./services/locatie.service";
+import RoomcodeService from "./services/roomcode.service";
 
 export const Map = () => {
   const [locaties, setLocaties] = useState([]);
   const [selectedLocatie, setSelectedLocatie] = useState(0);
+
+  const [roomcodes, setRoomcodes] = useState([]);
+
+  
+  
 
   useEffect(() => {
     LocatieService.getAll().then((response) => {
@@ -15,10 +21,21 @@ export const Map = () => {
     // });
   }, []);
 
-  return <div>
+  useEffect(() => {
+    RoomcodeService.getRoomcode().then((response) => {
+      setRoomcodes(response.data);
+    });
+  }, []);
+
+  return <main>
     {/* pinntje */}
     <button onClick={() => {setSelectedLocatie(1)}}> dranklokaal </button>
     <button onClick={() => {setSelectedLocatie(0)}}>  happy days</button>
+
+    {/* roomcode display */}
+    <section>
+      <p>{roomcodes.length > 0 ? roomcodes.name : "Geen roomcode"}</p>
+    </section>
     {/* kaartje */}
     <section>
       <p>{locaties.length > 0 ? locaties[selectedLocatie].name : "Geen titel"}</p>
@@ -27,5 +44,8 @@ export const Map = () => {
       <p>{locaties.length > 0 ? locaties[selectedLocatie].coordinaten : "Geen coordinaten"}</p>
     </section>
     {/* <p>{locaties.length > 0 ? locaties[1].title : "Geen titel"}</p> */}
-  </div>;
+
+
+
+  </main>;
 };
