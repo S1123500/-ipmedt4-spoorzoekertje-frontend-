@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Overlay.css";
+import "../css/Overlay.css";
 import PlayerContent from './PlayerContent';
 import RunnerContent from './RunnerContent';
 
