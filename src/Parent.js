@@ -37,12 +37,13 @@ class Parent extends Component {
         else {
             if (!this.is_player) {
                 return (
-                    <Overlay />
+                    <Overlay playertype="runner" questsleft="4" currentquest="Vind de volgende Kroeg" currentlocation="Centraal" />
                 );
             }
             if (this.is_player) {
-                return (
-                    <Overlay />
+                return ( 
+                    <Overlay  />
+                    
                 );
             }
         }
