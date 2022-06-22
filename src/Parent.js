@@ -17,7 +17,7 @@ class Parent extends Component {
     };
 
 
-    
+
     
     formCallback = (formData) =>{
         console.log("form data: " + formData)
