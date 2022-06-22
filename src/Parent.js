@@ -37,12 +37,12 @@ class Parent extends Component {
         else {
             if (!this.is_player) {
                 return (
-                    <Overlay />
+                    <Overlay playertype="runner" questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"/>
                 );
             }
             if (this.is_player) {
                 return (
-                    <Overlay />
+                    <Overlay playertype="runner" questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"/>
                 );
             }
         }
