@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import data from '../assets/data';
+// import data from '../assets/data';
 import Markers from './VenueMarkers';
 import useGeolocation from '../hooks/useGeolocation';
 import L from 'leaflet';
+import LocatieService from "../services/locatie.service";
+
 
 const markericon = new L.Icon({
   iconUrl: require('../assets/marker.png'),
@@ -25,13 +27,24 @@ const MapView = (props) => {
   let latitude = location.coords.lat;
   let longitude = location.coords.lng;
 
+  const [locaties, setLocaties] = useState([]);
+  const [selectedLocatie, setSelectedLocatie] = useState(0);
+
+  useEffect(() => {
+    LocatieService.getAll().then((response) => {
+      setLocaties(response.data);
+      
+    });
+  }, []);
+
+
   return (
     <Map center={[defaultLat, defaultLng]} zoom={zoom}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
       />
-      <Markers venues={data.venues} />
+      <Markers venues={locaties} />
       {
         location.loaded && !location.error && (
           <Marker icon={markericon} position={[latitude || defaultLat, longitude || defaultLng]}>
