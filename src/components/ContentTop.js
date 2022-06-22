@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Overlay.css";
+import "../css/Overlay.css";
 
 const ContentTop = (props) => {
 
