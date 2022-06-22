@@ -1,5 +1,5 @@
 import React from 'react';
-import "../css/Overlay.css";
+import "./Overlay.css";
 import Timer from "./Timer.js";
 
 const RunnerContent = (props) => {
