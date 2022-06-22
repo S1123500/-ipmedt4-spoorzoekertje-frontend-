@@ -31,7 +31,7 @@ class Section extends React.Component{
                 </button>
                 <article id="dropdownCode" className="contentCode">
                     <form action="">
-                        <input className="roomCode" type="text" id="roomCode" name="roomCode" defaultValue="roomCode" />
+                        <input className="roomCode" type="text" id="roomCode" name="roomCode" maxlength="4" placeholder="Room"/>
                         <input className="submit"type="submit" value="Join" />
                     </form>
                 </article>

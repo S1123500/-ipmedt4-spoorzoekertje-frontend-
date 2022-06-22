@@ -2,7 +2,7 @@ import React from 'react';
 import "../css/Overlay.css";
 import Timer from "./Timer.js";
 
-const PlayerContent = (props) => {
+const PlayerContent = (props) => { 
     return (
         <div className="bottomContent">
             <div className="questsleft">
