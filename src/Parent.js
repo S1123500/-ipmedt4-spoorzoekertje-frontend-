@@ -17,6 +17,7 @@ class Parent extends Component {
     };
 
     formCallback = (formData) =>{
+        this.setState({ in_game: !this.state.in_game });
         this.setState({room_code: formData});
         console.log("form data: " + formData);
     }
@@ -34,13 +35,15 @@ class Parent extends Component {
 
         else {
             if (!this.is_player) {
+                console.log("state data: " + this.state.room_code);
                 return (
                     <Overlay playertype="runner" questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"/>
                 );
             }
             if (this.is_player) {
+                console.log("state data: " + this.state.room_code);
                 return (
-                    <Overlay playertype="runner" questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"/>
+                    <Overlay playertype="player" questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"/>
                 );
             }
         }
