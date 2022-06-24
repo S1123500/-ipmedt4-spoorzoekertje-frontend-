@@ -4,9 +4,9 @@ import "../css/Overlay.css";
 const ContentTop = (props) => {
 
     return (
-        <div className="head">
+        <section className="head">
             <p className="role">You’re a {props.playertype} </p>
-        </div>
+        </section>
     );
 };
 

@@ -7,29 +7,32 @@ class Parent extends Component {
     constructor() {
         super();
         this.state = {
-            in_game: false,
             is_player: false,
+            in_game: false,
             is_correct: false,
             room_code: "1234"
-
         }
     }
 
     toggleInGame = (formData) => {
         console.log("goede code")
-        if(formData == this.state.room_code){
-            this.setState({ in_game: !this.state.in_game });
+        if(formData === this.state.room_code){
+            this.setState({ in_game: !this.state.in_game, is_player: !this.state.is_player });
         }
     };
 
     formCallback = (formData) =>{
-        if(formData == this.state.room_code){
+        if(formData === this.state.room_code){
             console.log('goede code')
-            this.setState({ in_game: !this.state.in_game });}
+            this.setState(previousState => ({
+                is_player: !previousState.is_player,
+                in_game: !previousState.in_game
+            }))}
         else{
-            
+            //do nothing
         }
         console.log("form data: " + formData);
+        console.log("callback player state: " + this.state.is_player);
     }
 
 
@@ -43,17 +46,18 @@ class Parent extends Component {
             );
         }
 
-        else {
-            if (!this.is_player) {
-                console.log("state data: " + this.state.room_code);
+        else {            
+            console.log("state data: " + this.state.room_code);
+            console.log("player data: " + this.state.is_player);
+            if (!this.state.is_player) {
                 return (
-                    <Overlay playertype="runner" questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"/>
+                    <Overlay playertype="runner"/>
                 );
             }
-            if (this.is_player) {
+            if (this.state.is_player) {
                 console.log("state data: " + this.state.room_code);
                 return (
-                    <Overlay playertype="player" questsleft="69" currentquest="Heel veel zuipen" currentlocation="Lazaru's"/>
+                    <Overlay playertype="player"/>
                 );
             }
         }

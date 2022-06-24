@@ -10,7 +10,9 @@ const getOne = (id) => {
   return axios.get(`${BASE_URL}/locatie/${id}`);
 };
 
-const postLocatie = () => {};
+const postLocatie = (data) => {
+  return axios.post(`${BASE_URL}/locatie/${data.id}`, data)
+};
 
 export default {
   getAll,

@@ -4,11 +4,11 @@ import Timer from "./Timer.js";
 
 const PlayerContent = (props) => {
     return (
-        <div className="bottomContent">
-            <div className="questsleft">
+        <section className="bottomContent">
+            <section className="questsleft">
                 <h1>Quests Left: {props.questsleft}</h1>
-            </div>
-            <div className="interaction-container">
+            </section>
+            <section className="interaction-container">
                 <h2>Current Quest</h2>
                 <ul className="submit-objective">
                     <li>
@@ -24,14 +24,14 @@ const PlayerContent = (props) => {
                     </li>
                 </ul>
 
-                <div className="bottomContentInner">
+                <article className="bottomContentInner">
                     <p>Receive next objective in</p>
                     <Timer totalseconds={69
                     }/>    
-                </div>
-            </div>
+                </article>
+            </section>
             <script src="src/js/Timer.js"></script>
-        </div>
+        </section>
     );
 };
 

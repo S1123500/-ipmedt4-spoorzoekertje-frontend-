@@ -34,7 +34,6 @@ const MapView = (props) => {
   useEffect(() => {
     LocatieService.getAll().then((response) => {
       setLocaties(response.data);
-      
     });
   }, []);
 
