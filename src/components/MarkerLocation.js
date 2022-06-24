@@ -6,6 +6,7 @@ import MarkerPopup from './MarkerPopup';
 const VenueMarkers = (props) => {
   const { venues } = props;
 
+  //aan venue worden de coordinaten meegegeven vanuit de database, en in markerpopup word data nu venue dus de locaties.
   const markers = venues.map((venue, index) => (
     <Marker key={index} position={venue.coordinaten} icon={VenueLocationIcon} >
       <MarkerPopup data={venue}/>

@@ -27,6 +27,7 @@ const MapView = (props) => {
   let latitude = location.coords.lat;
   let longitude = location.coords.lng;
 
+  //constante locaties krijgt alle locaties mee
   const [locaties, setLocaties] = useState([]);
   const [selectedLocatie, setSelectedLocatie] = useState(0);
 
@@ -44,8 +45,10 @@ const MapView = (props) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
       />
+      {/* vanues word alle locaties binnen de marker */}
       <Markers venues={locaties} />
       {
+        
         location.loaded && !location.error && (
           <Marker icon={markericon} position={[latitude || defaultLat, longitude || defaultLng]}>
             <Popup>You are here.</Popup>
