@@ -61,7 +61,7 @@ class Login extends React.Component {
         for (let i = 0; i < 4; i++) {
             code[i] = Math.floor(Math.random() * 10);
         }
-        console.log(code.join(""));
+        alert("De code is 1234")
         return code.join("");
     }
 
@@ -82,7 +82,7 @@ class Login extends React.Component {
                 </button>
                 <article id="dropdownCode" className="contentCode">
                     <form action="" onSubmit={this.onInput}>
-                        <input className="roomCode" type="text" id="roomCode" name="roomCode" placeholder="Code" onChange={this.handleChange} />
+                        <input className="roomCode" type="text" id="roomCode" name="roomCode" placeholder="Code" maxLength= "4" onChange={this.handleChange} />
                         <input className="submit" type="submit" value="Join" />
                     </form>
                 </article>
