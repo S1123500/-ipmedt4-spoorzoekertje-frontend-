@@ -1,0 +1,136 @@
+:root {
+    --overlay-yellow: #DFB51F;
+    --overlay-white: #FFFFFF;
+    --overlay-blue: #404BB0;
+    --overlay-lightblue: #4F5CD2;
+}
+
+.head {
+    background-color: var(--overlay-yellow);
+    height: 7.5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.role {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+.bottomContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--overlay-blue);
+    height: 45vh;
+}
+
+.questsleft {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 1rem;
+    height: 5rem;
+}
+
+.questsleft > h1 {
+    font-size: 3rem;
+    align-items: center;
+}
+
+p {
+    color: var(--overlay-white);
+    flex: 1;
+    align-self: center;
+    margin: auto;
+    font-size: 1rem;
+}
+
+li > p {
+    font-size: 1.33rem;
+    padding-left: 0.666rem;
+}
+
+h1, h2 {
+    color: var(--overlay-white);
+    flex: 1;
+    align-self: center;
+}
+
+.interaction-container {
+    background-color: var(--overlay-lightblue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.interaction-container > h2{
+    padding-left: auto;
+    padding-top: 2rem;
+}
+
+.interaction-container > p{
+    font-size: 1re;
+}
+
+.interaction-container * {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.submit-objective {
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+    width: 90vw;
+}
+
+.deelEenMeterBier {
+    color: var(--overlay-white);
+}
+
+.camera-icon {
+    align-self: stretch;
+    object-fit: cover;
+}
+
+.bottomContentInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottomContentInner > p{
+    color: #FFFFFF;
+}
+
+.nextLocation {
+    width: 80.16%;
+    height: 20.21%;
+    color: var(--overlay-white);
+}
+
+.submit-objective {
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.timer {
+    transform: translateY(-2rem);
+    margin: 0%;
+    padding: 0%;
+    font-size: 10rem;
+}
+
+.runner-label {
+    margin: 2%;
+}
