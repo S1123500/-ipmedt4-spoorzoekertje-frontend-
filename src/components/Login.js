@@ -61,7 +61,9 @@ class Login extends React.Component {
         for (let i = 0; i < 4; i++) {
             code[i] = Math.floor(Math.random() * 10);
         }
-        alert("Demo code is 1234")
+        alert("Demo code is 1234");
+        console.log(code.join(""));
+
         return code.join("");
     }
 

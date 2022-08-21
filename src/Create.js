@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+
 
 function CreateLocatie(){
     return(
@@ -37,3 +39,4 @@ function CreateLocatie(){
 }
 
 export default CreateLocatie;
+

@@ -7,15 +7,28 @@ const getAll = () => {
 };
 //haalt 1 locatie op uit de backend op ID
 const getOne = (id) => {
-  return axios.get(`${BASE_URL}/locatie/${id}`);
+  return axios.get(`${BASE_URL}/locaties/${id}`);
 };
 
-const postLocatie = (data) => {
-  return axios.post(`${BASE_URL}/locatie/${data.id}`, data)
-};
+const postLocatie = (locatie) => {
+  axios.post(`${BASE_URL}/locaties`, locatie, {
+      "Content-Type": "application/json"
+  }).then(res => {
+      console.log(res)
+  })
+}
+
+// const postLocatie = ({ name, beschrijving, coordinaten }) => {
+//   return axios.post(`${BASE_URL}/locaties`, {
+//     name: name,
+//     beschrijving: beschrijving,
+//     coordinaten: coordinaten
+//   })
+// }
 
 export default {
   getAll,
   getOne,
   postLocatie,
 };
+

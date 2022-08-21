@@ -4,18 +4,15 @@ import Overlay from './components/GameOverlay';
 import Login from './components/Login';
 import './css/App.css';
 import LocatieService from "./services/locatie.service";
-// import ApiGET from './hooks/ApiGET';
-// import ApiPOST from './hooks/ApiPOST';
-
+//import { CreateLocationForm } from './components/CreateLocationForm';
 
 
 function App() {
-
-  //console.log(LocatieService.getAll());
-
   return (
     <section className="App">
       <Parent />
+      {/* <CreateLocationForm /> debug */}
+      //console.log(LocatieService.getAll());
     </section>
   );
 }

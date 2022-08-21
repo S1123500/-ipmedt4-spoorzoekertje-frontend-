@@ -7,14 +7,14 @@ export const Map = () => {
   const [selectedLocatie, setSelectedLocatie] = useState(0);
 
   const [roomcodes, setRoomcodes] = useState([]);
+  const [newcode, getRoomcodes ] = useState([]);
 
-  
-  
+
 
   useEffect(() => {
     LocatieService.getAll().then((response) => {
       setLocaties(response.data);
-      
+
     });
     // LocatieService.getOne(1).then((response) => {
     //   setLocaties(response.data);
@@ -27,10 +27,16 @@ export const Map = () => {
     });
   }, []);
 
+  useEffect(() => {
+    RoomcodeService.postRoomcode().then((response) => {
+      getRoomcodes(response.data);
+    });
+  }, []);
+
   return <main>
     {/* pinntje */}
-    <button onClick={() => {setSelectedLocatie(1)}}> dranklokaal </button>
-    <button onClick={() => {setSelectedLocatie(0)}}>  happy days</button>
+    <button onClick={() => { setSelectedLocatie(1) }}>dranklokaal</button>
+    <button onClick={() => { setSelectedLocatie(0) }}>happy days</button>
 
     {/* roomcode display */}
     <section>
@@ -44,8 +50,5 @@ export const Map = () => {
       <p>{locaties.length > 0 ? locaties[selectedLocatie].coordinaten : "Geen coordinaten"}</p>
     </section>
     {/* <p>{locaties.length > 0 ? locaties[1].title : "Geen titel"}</p> */}
-
-
-
   </main>;
 };

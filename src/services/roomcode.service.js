@@ -7,7 +7,8 @@ const getRoomcode = () => {
 }
 
 const postRoomcode = () =>{
-
+    return axios.post(`${BASE_URL}/roomcode`);
 }
 
-export default{getRoomcode};
+export default{getRoomcode, postRoomcode};
+

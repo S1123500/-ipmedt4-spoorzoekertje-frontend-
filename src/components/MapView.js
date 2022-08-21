@@ -47,7 +47,7 @@ const MapView = (props) => {
       {/* vanues word alle locaties binnen de marker */}
       <Markers venues={locaties} />
       {
-        
+
         location.loaded && !location.error && (
           <Marker icon={markericon} position={[latitude || defaultLat, longitude || defaultLng]}>
             <Popup>You are here.</Popup>

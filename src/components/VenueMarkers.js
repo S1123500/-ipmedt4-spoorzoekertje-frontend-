@@ -21,6 +21,7 @@ const VenueMarkers = (props) => {
     if (!element.gehaald) {
       return element;
     }
+    return "";
   });
 
   return <Fragment>
