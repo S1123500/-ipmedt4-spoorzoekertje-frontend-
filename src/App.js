@@ -12,7 +12,6 @@ function App() {
     <section className="App">
       <Parent />
       {/* <CreateLocationForm /> debug */}
-      //console.log(LocatieService.getAll());
     </section>
   );
 }
