@@ -29,6 +29,7 @@ const MapView = (props) => {
 
   //constante locaties krijgt alle locaties mee
   const [locaties, setLocaties] = useState([]);
+  const [selectedLocatie, setSelectedLocatie] = useState(0);
 
   useEffect(() => {
     LocatieService.getAll().then((response) => {
@@ -46,6 +47,7 @@ const MapView = (props) => {
       {/* vanues word alle locaties binnen de marker */}
       <Markers venues={locaties} />
       {
+
         location.loaded && !location.error && (
           <Marker icon={markericon} position={[latitude || defaultLat, longitude || defaultLng]}>
             <Popup>You are here.</Popup>

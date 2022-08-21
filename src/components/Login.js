@@ -4,8 +4,6 @@ import add from "../assets/add.svg"
 import placeholder from "../assets/placeholder.svg"
 import question from "../assets/question.svg"
 
-//import LocatieService from "./services/locatie.service.js";
-
 import ApiGET from "../hooks/ApiGET";
 
 import "../css/Login.css";
@@ -52,7 +50,6 @@ class Login extends React.Component {
             }
             else {
                 ApiROOM(generated);
-
                 return;
             }
         }
@@ -66,6 +63,7 @@ class Login extends React.Component {
         }
         alert("Demo code is 1234");
         console.log(code.join(""));
+
         return code.join("");
     }
 

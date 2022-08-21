@@ -110,7 +110,6 @@ const RunnerContent = (props) => {
     );
 };
 
-
 RunnerContent.defaultProps = {
     questsleft: "unknown",
     currentquest: "default",
